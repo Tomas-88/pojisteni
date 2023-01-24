@@ -1,0 +1,63 @@
+<div class="reg d-sm-block w-100 border pb-3 mb-3 bg-white">
+    <br/>
+    <h1 class="text-primary">Sjednat pojištění</h1>
+    <br/>
+    <div class="container">
+        <form method="post">
+            <div class="d-flex justify-content-center">
+                <div class="form-group col-lg-4">
+                    <label class="" for="vyber-pojisteni">Vyber Pojištění</label>
+                    <select class="form-select" name="typ_pojisteni">
+
+                        <option id="vyber-pojisteni" value="Životní pojištění" name="pojistenia">Životní pojištění</option>
+                        <option id="vyber-pojisteni" value="Úrazové pojištění" name="pojistenib">Úrazové pojištění</option>
+                        <option id="vyber-pojisteni" value="Pojištění domácnosti" name="pojistenic">Pojištění domácnosti</option>
+                        <option id="vyber-pojisteni" value="Cestovní pojištění" name="pojistenid">Cestovní pojištění</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center m-3">
+                <div class="form-group col-lg-4">
+                    <label for="castka">Částka</label>
+                    <input type="number" name="castka" class="form-control" id="castka"
+                           placeholder="Zadej částku">
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center m-3">
+                <div class="form-group col-lg-1">
+
+                    <label for="platnost-od">Platnost od</label>
+                    <div class="input-group date" id="datumOd">
+                        <input type="date" name="platnost_od"/>
+
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center m-3">
+                <div class="form-group col-lg-1">
+                    <label for="platnost-do">Platnost do</label>
+                    <div class="input-group date" id="datumDo">
+                        <input type="date" name="platnost_do"/>
+                    </div>
+                </div>
+            </div>
+
+            <br/>
+            <div>
+                <button type="submit" class="btn btn-primary">Dokončit</button>
+            </div>
+        </form>
+
+    </div>
+
+</div>
+<script type="text/javascript">
+    app.controller("myController", [
+        "$scope",
+        function ($scope) {
+            $scope.DateFormat = "dd/mm/yyyy";
+
+        }]);
+</script>

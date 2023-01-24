@@ -1,0 +1,91 @@
+<div class="reg d-sm-block offset-3 w-50 border pb-3 mb-3 bg-light">
+    <br/>
+    <h1><?= $editaceUzivatel['jmeno'] . " " . $editaceUzivatel['prijmeni'] ?></h1>
+    <div class="col-4 offset-4 border-bottom mb-2">
+    </div>
+    <br/>
+    <div class="container">
+        <form method="post">
+            <?php if ($uzivatel['admin']) : ?>
+            <div class="d-flex justify-content-center">
+                <div class="form-row">
+                    <div class="form-group col-lg-10">
+                        <label for="upravit-jmeno">Jméno</label>
+                        <input type="text" name="jmeno" value="<?= $editaceUzivatel['jmeno'] ?>" class="form-control"
+                               id="upravit-jmeno">
+
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="form-group col-lg-10">
+                        <label for="upravit-prijmeni">Příjmení</label>
+                        <input type="text" name="prijmeni" class="form-control" id="upravit-prijmeni"
+                               value="<?= $editaceUzivatel['prijmeni'] ?>">
+                    </div>
+                </div>
+            </div>
+            <?php endif ?>
+            <h3 class="text-danger">Upravit profil</h3>
+            <br/>
+            <div class="d-flex justify-content-center">
+                <div class="form-row">
+                    <div class="form-group col-lg-10">
+                        <label for="upravit-adresa">Adresa</label>
+                        <input type="text" name="adresa" class="form-control" id="upravit-adresa"
+                               value="<?= $editaceUzivatel['adresa'] ?> ">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="form-group col-lg-10">
+                        <label for="upravit-mesto">Město<small class="text-muted"> (pro kontrolu)</small></label>
+                        <input type="text" name="mesto" class="form-control" id="upravit-mesto"
+                               value="<?= $editaceUzivatel['mesto'] ?> ">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="form-group col-lg-10">
+                        <label for="upravit-psc">PSČ</label>
+                        <input type="text" name="psc" class="form-control" id="upravit-psc"
+                               value="<?= $editaceUzivatel['psc'] ?> ">
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <!--<div class="d-flex justify-content-center">
+                <div class="form-row">
+                    <div class="form-group col-lg-10">
+                        <label for="prihlaseni-heslo">Heslo<small class="text-muted"> (staré heslo)</small></label>
+                        <input type="password" name="heslo" class="form-control" id="prihlaseni-heslo"
+                               placeholder="Zadej heslo ">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="form-group col-lg-10">
+                        <label for="prihlaseni-heslo">Heslo<small class="text-muted"> (nové heslo)</small></label>
+                        <input type="password" name="heslo_znovu" class="form-control" id="prihlaseni-heslo"
+                               placeholder="Zadej stejné heslo ">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="form-group col-lg-10">
+                        <label for="prihlaseni-heslo">Heslo<small class="text-muted"> (kontrola hesla)</small></label>
+                        <input type="password" name="heslo_znovu" class="form-control" id="prihlaseni-heslo"
+                               placeholder="Zadej stejné heslo ">
+                    </div>
+                </div>
+            </div>-->
+
+            <div class="d-flex justify-content-center">
+                <div class="form-group col-lg-4">
+                    <label for="prihlaseni-email">E-mail</label>
+                    <input type="text" name="email" class="form-control" id="prihlaseni-email"
+                           value=" <?= $editaceUzivatel['email'] ?> ">
+                </div>
+            </div>
+            <br/>
+            <button type="submit" class="btn btn-primary">Uložit</button>
+        </form>
+
+    </div>
+
+</div>

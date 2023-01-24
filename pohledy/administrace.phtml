@@ -1,0 +1,12 @@
+<div class="reg d-sm-block w-100 border pb-3 mb-3 bg-white">
+    <div class="container">
+        <p class="m-5">Vítejte v administraci, jste přihlášeni jako <strong class="text-primary"><?= $email ?></strong></p>
+        <?php if (!$admin) : ?>
+            <h4 class="text-danger">Nemáte administrátorská oprávnění, požádejte administrátora webu, aby vám je přidělil.</h4>
+        <?php endif ?>
+        <div>
+            <a class="btn btn-primary" href="admin-uzivatele" role="button">Seznam uživatelů</a>
+        </div>
+        <br/>
+    </div>
+</div>

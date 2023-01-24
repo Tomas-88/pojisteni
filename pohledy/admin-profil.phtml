@@ -1,0 +1,60 @@
+<div class="reg d-sm-block w-100 border pb-3 mb-3 bg-white">
+    <h1 class="text-primary m-3">Profil uživatele</h1>
+    <div class="container col-6 d-flex align-content-center mt-4 mb-3">
+        <div class="card" style="width: 40rem;">
+            <div class="card-body shadow bg-light">
+                <h4 class="card-title m-2"><?= $jmeno . " " . $prijmeni ?></h4>
+                <div class="col-4 offset-4 border-bottom mb-2">
+                </div>
+                <div class="row">
+                    <p class="col-12"><i class="fa-solid fa-address-card"></i><br /><?= $email ?></p>
+                    <div class="col-4 offset-4 border-bottom mb-2"></div>
+                    <p class="col-12"><i class="fa-solid fa-location-dot"></i><br /><?= " " . $adresa . ", " . $mesto . ", " . $psc ?>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div>
+
+        <a class="btn btn-dark" href="sjednat-pojisteni?id=<?= $id ?>" role="button">Přidat pojištění</a>
+        <a class="btn btn-warning" href="profil-editace?id=<?= $id ?>" role="button">Editovat pojištěnce</a>
+    </div>
+
+    <br />
+    <h1 class="p-md-3">Sjednaná pojištění</h1>
+    <table class="table table-bordered table-striped table-hover">
+        <thead class="bg-primary">
+            <td>Pojištění</td>
+            <td>Částka</td>
+            <td>Platnost od</td>
+            <td>Platnost do</td>
+            <td>Udaj</td>
+        </thead>
+        <?php foreach ($pojisteni as $pojistka) : ?>
+            <tr>
+                <td>
+                    <?= $pojistka['typ_pojisteni'] ?>
+                </td>
+                <td>
+                    <?= $pojistka['castka'] ?>
+                </td>
+                <td>
+                    <?= $pojistka['platnost_od'] ?>
+                </td>
+                <td>
+                    <?= $pojistka['platnost_do'] ?>
+                </td>
+                <td>
+                    <a class="btn-sm btn-primary text-decoration-none" href="admin-editace-pojisteni?id=<?= $pojistka['pojisteni_id'] ?>" role="button">Upravit pojištění</a>
+                    <a class="btn-sm btn-danger text-decoration-none" href="admin-profil?id=<?= $id ?>&delete=<?= $pojistka['pojisteni_id'] ?>" role="button">Smazat pojištění</a>
+                </td>
+            </tr>
+
+
+        <?php endforeach ?>
+    </table>
+    <br />
+
+</div>

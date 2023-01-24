@@ -1,0 +1,41 @@
+<div class="reg d-sm-block w-100 border pb-3 mb-3 bg-white">
+    <br />
+    <h6 class="text-primary text-danger">Editace pojištění</h6>
+    <br />
+    <h1 class="text-primary"><?= $jmeno . " " . $prijmeni ?></h1>
+    <div class="container">
+        <form method="post">
+            <div class="d-flex justify-content-center m-3">
+                <div class="form-group col-lg-4">
+                    <label for="castka">Částka</label>
+                    <input type="number" name="castka" class="form-control" id="castka" value="<?= $castka ?>">
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center m-3">
+                <div class="form-group col-lg-1">
+
+                    <label for="platnost-od">Platnost od</label>
+                    <div class="input-group date" id="datumOd">
+                        <input type="date" name="platnost_od" value="<?= $platnost_od ?>" />
+
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center m-3">
+                <div class="form-group col-lg-1">
+                    <label for="platnost-do">Platnost do</label>
+                    <div class="input-group date" id="datumDo">
+                        <input type="date" name="platnost_do" value="<?= $platnost_do ?>" />
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div>
+                <button class="btn btn-primary" id="edit" type="submit">Upravit pojištění</button>
+            </div>
+        </form>
+
+    </div>
+
+</div>
